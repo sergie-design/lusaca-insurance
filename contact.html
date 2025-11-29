@@ -5,34 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lusaca Insurance | Contact Us</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
     <style>
         /* CSS from index.html repeated for consistency */
         :root {
-            --primary: #111111;
-            --secondary: #1e293b;
-            --accent: #D4AF37;
-            --highlight: #C2185B;
-            --text: #f8f8f8;
-            --text-secondary: #aaaaaa;
+            --primary: #ffffff;      
+            --secondary: #f0f0f0;    
+            --accent: #D4AF37;       
+            --highlight: #C2185B;    
+            --text: #111111;         
+            --text-secondary: #444444; 
         }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Georgia', serif; }
-        body { background-color: var(--primary); color: var(--text); line-height: 1.6; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--primary); color: var(--text); line-height: 1.6; font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
         a { text-decoration: none; color: inherit; transition: 0.3s; }
         section { padding: 4rem 5%; max-width: 1200px; margin: 0 auto; }
         
         /* NAVIGATION */
-        nav { background: var(--primary); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--highlight); position: sticky; top: 0; z-index: 1000; }
-        .logo { font-size: 1.8rem; font-weight: 900; color: var(--accent); letter-spacing: 1px; }
-        .logo span { color: var(--highlight); }
+        nav { background: var(--primary); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--secondary); position: sticky; top: 0; z-index: 1000; }
+        .logo { font-size: 1.8rem; font-weight: 900; color: var(--text); letter-spacing: -1px; }
+        .logo span { color: var(--accent); }
         .nav-links { display: flex; gap: 2rem; }
-        .nav-links a { font-weight: 500; color: var(--text); font-size: 0.95rem; }
-        .nav-links a:hover { color: var(--accent); }
-        .btn-nav { background: var(--accent); color: var(--primary) !important; padding: 0.5rem 1.2rem; border-radius: 5px; font-weight: bold; }
-        .btn-nav:hover { background: var(--highlight); color: var(--text) !important; }
+        .nav-links a { font-weight: 600; color: var(--text); font-size: 0.95rem; }
+        .nav-links a:hover { color: var(--highlight); }
+        .btn-nav { background: var(--accent); color: var(--primary) !important; padding: 0.5rem 1.2rem; border-radius: 50px; font-weight: bold; }
+        .btn-nav:hover { background: var(--highlight); color: var(--primary) !important; }
 
         /* PAGE HEADER */
         .page-header { background-color: var(--secondary); text-align: center; padding: 3rem 5%; margin-bottom: 2rem; border-bottom: 5px solid var(--accent); }
-        .page-header h1 { color: var(--text); font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .page-header h1 { color: var(--text); font-size: 2.5rem; margin-bottom: 0.5rem; font-family: 'Playfair Display', serif; }
 
         /* CONTACT CONTENT */
         .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; text-align: center; }
@@ -52,7 +55,7 @@
         .contact-item a:hover { color: var(--highlight); }
 
         /* FOOTER */
-        footer { background: var(--primary); color: #555; padding: 2rem; text-align: center; font-size: 0.9rem; border-top: 1px solid var(--secondary); }
+        footer { background: var(--text); color: var(--text-secondary); padding: 2rem; text-align: center; font-size: 0.9rem; }
 
         @media (max-width: 768px) {
             .nav-links { display: none; }
