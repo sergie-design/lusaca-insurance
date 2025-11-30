@@ -5,124 +5,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Lusaca | 15+ Years of Trust</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
     <style>
-        /* CSS from index.html repeated for consistency */
+        /* High-Contrast White/Gold/Black Palette - REPEATED FOR CONSISTENCY */
         :root {
-            --primary: #ffffff;      
-            --secondary: #f0f0f0;    
-            --accent: #D4AF37;       
-            --highlight: #C2185B;    
-            --text: #111111;         
-            --text-secondary: #444444; 
+            --primary: #ffffff; --secondary: #f8f9fa; --accent: #D4AF37; --highlight: #C2185B; --text: #111111; --text-secondary: #555555;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { background-color: var(--primary); color: var(--text); line-height: 1.6; font-family: 'Inter', sans-serif; }
-        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
         a { text-decoration: none; color: inherit; transition: 0.3s; }
-        section { padding: 4rem 5%; max-width: 1200px; margin: 0 auto; }
+        section { padding: 5rem 5%; max-width: 1200px; margin: 0 auto; }
         
-        /* NAVIGATION */
-        nav { background: var(--primary); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--secondary); position: sticky; top: 0; z-index: 1000; }
-        .logo { font-size: 1.8rem; font-weight: 900; color: var(--text); letter-spacing: -1px; }
-        .logo span { color: var(--accent); }
-        .nav-links { display: flex; gap: 2rem; }
-        .nav-links a { font-weight: 600; color: var(--text); font-size: 0.95rem; }
-        .nav-links a:hover { color: var(--highlight); }
-        .btn-nav { background: var(--accent); color: var(--primary) !important; padding: 0.5rem 1.2rem; border-radius: 50px; font-weight: bold; }
-        .btn-nav:hover { background: var(--highlight); color: var(--primary) !important; }
+        /* --- NEW NAVIGATION STYLES --- */
+        .top-bar { background-color: var(--text); color: var(--primary); padding: 0.6rem 0; font-size: 0.9rem; font-family: 'Inter', sans-serif; }
+        .top-bar-container { max-width: 1200px; margin: 0 auto; padding: 0 5%; display: flex; justify-content: flex-end; gap: 2rem; }
+        .top-bar a { opacity: 0.8; font-weight: 500; transition: 0.3s; }
+        .top-bar a:hover { opacity: 1; color: var(--accent); }
+        .main-header { background: var(--primary); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+        .logo { font-size: 1.8rem; font-weight: 900; color: var(--text); letter-spacing: -1px; } .logo span { color: var(--accent); }
+        .btn-nav { background: var(--accent); color: var(--primary) !important; padding: 0.8rem 2rem; border-radius: 50px; font-weight: bold; font-size: 1rem; letter-spacing: 0.5px; box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3); }
+        .btn-nav:hover { background: var(--highlight); box-shadow: 0 4px 15px rgba(194, 24, 91, 0.3); }
 
         /* PAGE HEADER */
-        .page-header { background-color: var(--secondary); text-align: center; padding: 3rem 5%; margin-bottom: 2rem; border-bottom: 5px solid var(--accent); }
-        .page-header h1 { color: var(--text); font-size: 2.5rem; margin-bottom: 0.5rem; font-family: 'Playfair Display', serif; }
+        .page-header { background-color: var(--secondary); text-align: center; padding: 4rem 5%; border-bottom: 4px solid var(--accent); }
+        .page-header h1 { color: var(--text); font-size: 3rem; margin-bottom: 0.5rem; }
+        .page-header p { color: var(--text-secondary); font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
 
-        /* ABOUT CONTENT */
-        .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-        .story-content h2 { color: var(--accent); margin-bottom: 1rem; font-size: 2rem; }
-        .story-content h3 { color: var(--highlight); margin-top: 1.5rem; }
-        .story-content p { color: var(--text-secondary); margin-bottom: 1rem; }
-        .story-image { 
-            background: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'); 
-            background-size: cover; background-position: center; height: 400px; border-radius: 10px; border: 2px solid var(--highlight);
-        }
+        /* ABOUT CONTENT - CENTERED, NO IMAGE */
+        .about-section-centered { text-align: center; padding: 6rem 5%; }
+        .story-content-centered { max-width: 800px; margin: 0 auto; }
+        .story-content-centered h2 { color: var(--text); margin-bottom: 2rem; font-size: 2.5rem; }
+        .story-content-centered h3 { color: var(--accent); margin-top: 3.5rem; margin-bottom: 1.5rem; font-size: 2rem; }
+        .story-content-centered p { color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 1.15rem; leading-relaxed; }
 
         /* VALUE STATS */
-        .stats-grid { display: flex; justify-content: space-around; padding: 3rem 0; text-align: center; border-top: 1px solid var(--secondary); }
-        .stat h3 { color: var(--highlight); font-size: 2.5rem; margin-bottom: 0.5rem; font-family: 'Playfair Display', serif; }
-        .stat p { color: var(--text-secondary); }
-
+        .stats-grid { display: flex; justify-content: space-around; padding: 4rem 0; text-align: center; background: var(--secondary); border-top: 1px solid #eee; }
+        .stat h3 { color: var(--highlight); font-size: 3rem; margin-bottom: 0.5rem; }
+        .stat p { color: var(--text); font-weight: 600; font-size: 1.1rem; }
 
         /* FOOTER */
-        footer { background: var(--text); color: var(--text-secondary); padding: 2rem; text-align: center; font-size: 0.9rem; }
-    
-    /* NEW MOBILE NAVIGATION RULE */
-    nav { flex-direction: column; align-items: flex-start; }
-    .nav-links { 
-        display: flex; /* Ensure links are visible */
-        flex-direction: column; /* Stacks links vertically */
-        width: 100%;
-        gap: 10px; /* Space out the links */
-        margin-top: 10px;
-        padding-top: 10px;
-        border-top: 1px solid var(--secondary);
-    }
-    .nav-links a { 
-        padding: 5px 0; /* Makes touch target bigger */
-    }
-}
+        footer { background: var(--text); color: #888; padding: 3rem; text-align: center; font-size: 0.9rem; }
+
+        @media (max-width: 768px) {
+            .top-bar-container { justify-content: center; gap: 1.2rem; font-size: 0.85rem; }
+            .main-header { padding: 0.8rem 5%; } .logo { font-size: 1.5rem; } .btn-nav { padding: 0.6rem 1.2rem; font-size: 0.9rem; }
+            .page-header h1 { font-size: 2.5rem; }
+            .stats-grid { flex-direction: column; gap: 3rem; }
+        }
     </style>
 </head>
 <body>
 
-    <nav>
-        <div class="logo">LUSACA<span>.</span></div>
-        <div class="nav-links">
+    <div class="top-bar">
+        <div class="top-bar-container">
             <a href="index.html">Home</a>
             <a href="services.html">Services</a>
-            <a href="about.html" style="color: var(--highlight);">About Us</a>
-            <a href="contact.html" class="btn-nav">Get Quote</a>
+            <a href="about.html" style="color: var(--accent); opacity: 1;">About Us</a>
         </div>
+    </div>
+
+    <nav class="main-header">
+        <div class="logo">LUSACA<span>.</span></div>
+        <a href="contact.html" class="btn-nav">Get Quote</a>
     </nav>
 
     <div class="page-header">
-        <h1>Our Story: 15 Years of Unbiased Trust</h1>
-        <p style="color: var(--text-secondary);">We are independent brokers, meaning our loyalty is always to the client, not the carrier.</p>
+        <h1>Our Story: 15 Years of Trust</h1>
+        <p>Independent brokers whose loyalty is always to the client, not the carrier.</p>
     </div>
 
-    <section>
-        <div class="story-grid">
-            <div class="story-content">
-                <h2>The Lusaca Advantage: Broker, Not Agent</h2>
-                <p>Lusaca was established over 15 years ago to fill a gap in the Kenyan insurance market: genuine, client-first representation. Unlike agents who work for a single company, our team of experts negotiates across the entire market to secure terms and rates you cannot access alone.</p>
-                
-                <h3>Claim Recovery Specialists</h3>
-                <p>Our commitment is proven in the toughest situations. We specialize in aggressive **Third-Party Claim Recovery**, using our legal and procedural knowledge to ensure you are compensated, even when liability is complex. This is our promise of hard work.</p>
-                
-                <h3>Partnerships Built on Performance</h3>
-                <p>Our long-term, high-volume partnerships with Britam, CIC, Heritage, Sanlam, ICEA Lion, and Old Mutual allow us to command quicker processing times and more favorable terms for every Lusaca client.</p>
-            </div>
-            <div class="story-image"></div>
-        </div>
-
-        <div class="stats-grid">
-            <div class="stat">
-                <h3><i class="fas fa-chart-line" style="color: var(--accent);"></i> 15+</h3>
-                <p>Years Experience</p>
-            </div>
-            <div class="stat">
-                <h3><i class="fas fa-percent" style="color: var(--accent);"></i> 100%</h3>
-                <p>Client Focus</p>
-            </div>
-            <div class="stat">
-                <h3><i class="fas fa-map-marker-alt" style="color: var(--accent);"></i> Nairobi</h3>
-                <p>Market Leaders</p>
-            </div>
+    <section class="about-section-centered">
+        <div class="story-content-centered">
+            <h2>The Lusaca Advantage: Broker, Not Agent</h2>
+            <p>Lusaca was established over 15 years ago to fill a critical gap in the Kenyan insurance market: genuine, client-first representation. Unlike agents who work for a single company, our team of experts negotiates across the entire market to secure terms and rates you cannot access alone.</p>
+            
+            <h3>Claim Recovery Specialists</h3>
+            <p>Our commitment is proven in the toughest situations. We specialize in aggressive <strong>Third-Party Claim Recovery</strong>, using our deep legal and procedural knowledge to ensure you are compensated, even when liability is complex. This is our promise of hard work.</p>
+            
+            <h3>Partnerships Built on Performance</h3>
+            <p>Our long-term, high-volume partnerships with major carriers like Britam, CIC, Heritage, Sanlam, ICEA Lion, and Old Mutual allow us to command quicker processing times and more favorable terms for every Lusaca client.</p>
         </div>
     </section>
 
+    <div class="stats-grid">
+        <div class="stat">
+            <h3>15+</h3>
+            <p>Years Experience</p>
+        </div>
+        <div class="stat">
+            <h3>100%</h3>
+            <p>Client Focus</p>
+        </div>
+        <div class="stat">
+            <h3>Top</h3>
+            <p>Nairobi Brokers</p>
+        </div>
+    </div>
+
     <footer>
-        &copy; 2025 Lusaca Insurance Agency. Nairobi, Kenya.
+        <p>&copy; 2025 Lusaca Insurance Agency. All rights reserved. | Nairobi, Kenya.</p>
     </footer>
 
 </body>
